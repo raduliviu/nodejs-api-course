@@ -5,22 +5,22 @@ const postSchema = new Schema(
   {
     title: {
       type: String,
-      required,
+      required: true,
     },
     imageUrl: {
       type: String,
-      required,
+      required: true,
     },
     content: {
       type: String,
-      required,
+      required: true,
     },
     creator: {
       type: Object,
-      required,
+      required: true,
     },
   },
-  { timestamps }
+  { timestamps: true }
 );
 
 module.exports = mongoose.model('Post', postSchema);
